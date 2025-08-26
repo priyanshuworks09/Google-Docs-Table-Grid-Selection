@@ -1,23 +1,19 @@
 import React from 'react';
-import TableCreator from './Components/TableCreator';
 import './App.css';
-
+import ExpeseForm from './Components/ExpenseForm';
+import { Provider } from 'react-redux';
+import { store } from './Redux/store';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
     <div className="App">
-      <header className="app-header">
-        <h1>React Table Creator</h1>
-        <p>Interactive table creation interface inspired by Google Docs</p>
-      </header>
+      <ToastContainer position='top-right' autoClose= {2000}></ToastContainer>
+      <Provider store={store}>
+        <ExpeseForm />
+      </Provider>
       
-      <main className="main-content">
-        <TableCreator />
-      </main>
       
-      <footer className="app-footer">
-        <p>Built with React • Hover to select • Click to create</p>
-      </footer>
     </div>
   );
 }

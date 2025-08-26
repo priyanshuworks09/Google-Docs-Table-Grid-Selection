@@ -1,0 +1,11 @@
+.main-div {
+    max-width: 500px;
+    margin: auto;
+    /* display: flex;
+    justify-content: center;
+    text-align: center; */
+}
+
+.lebel-form {
+    margin-top: 10px !important;
+}
